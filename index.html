@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/styles.css" />
+		<script
+			src="https://kit.fontawesome.com/3b57eb3f32.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Golf blog</title>
+	</head>
+	<body>
+		<section class="intro flex_col">
+			<div class="navbar flex">
+				<p class="logo">Logo</p>
+				<!-- <img src="/resources/images/golf-ball-with-dents.png" class="logo" /> -->
+				<ul class="links flex">
+					<li><a>Home</a></li>
+					<li><a>Posts</a></li>
+					<li><a>About</a></li>
+					<li><a>Contact</a></li>
+				</ul>
+			</div>
+			<div class="middle flex">
+				<div class="pagination">
+					<div class="current">01</div>
+					<div class="total">04</div>
+				</div>
+				<h1 class="title">
+					The blog you have been <br />
+					looking for, <br />
+					this whole time
+				</h1>
+			</div>
+			<div class="arrow flex">
+				<i class="fa fa-thin fa-arrow-down"></i>
+			</div>
+		</section>
+		<section class="trending flex_col">
+			<h2 class="title trending-title">
+				Trending in the<br /><span>Golfing World</span>
+			</h2>
+			<div class="flex carousel-container">
+				<div class="pagination trending-page">
+					<div class="current" id="trending-pagination">02</div>
+					<div class="total">04</div>
+				</div>
+				<div class="handle left-handle flex">
+					<i class="fa fa-thin fa-arrow-left"></i>
+				</div>
+				<div class="slider flex"></div>
+				<div class="handle right-handle flex">
+					<i class="fa fa-thin fa-arrow-right"></i>
+				</div>
+			</div>
+		</section>
+		<section class="about"></section>
+		<section class="contact"></section>
+		<script src="/js/index.js"></script>
+	</body>
+</html>

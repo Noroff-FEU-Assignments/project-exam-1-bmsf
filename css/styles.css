@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Colors */
+
+:root {
+	--primary-color: #0f2615;
+	--secondary-color: #3a400e;
+	--silver: #ebebeb;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Raleway';
+	color: white;
+	overflow-x: hidden;
+}
+
+/* Intro section */
+
+section {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+.intro {
+	background-image: url(/resources/images/allan-nygren--xvKQuNtOhI-unsplash.jpg);
+	background-size: cover;
+	background-position: center center;
+	justify-content: space-between;
+}
+
+/* Utilites */
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex_col {
+	display: flex;
+	flex-direction: column;
+}
+
+.pagination {
+	padding: 3rem;
+	font-size: 18px;
+}
+
+.current {
+	border-bottom: solid 1px white;
+}
+
+.total {
+	opacity: 0.5;
+}
+
+.title {
+	font-size: 3rem;
+}
+
+/* Navbar */
+
+.navbar {
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	color: white;
+	padding-top: 20px;
+}
+
+.logo {
+	max-width: 20px;
+	margin: 2rem;
+}
+
+.links {
+	list-style: none;
+	margin: 2rem;
+}
+
+.links li {
+	padding: 0 15px;
+}
+
+/* Middle section of intro */
+
+.middle {
+	width: 60%;
+}
+
+/* Ending section of intro */
+
+.arrow {
+	justify-content: flex-end;
+}
+
+.arrow i {
+	margin: 50px;
+	font-size: 35px;
+}
+
+/* Trending section */
+
+.trending {
+	background: var(--silver);
+	height: 1000px;
+	justify-content: center;
+	gap: 50px 0px;
+}
+
+.trending-title {
+	margin: 0;
+	left: 182px;
+	position: relative;
+	color: var(--primary-color);
+}
+
+.trending-page {
+	color: var(--primary-color);
+	width: 20px;
+}
+
+#trending-pagination {
+	border-bottom: var(--primary-color) solid 1px;
+}
+
+.carousel-container {
+	align-items: center;
+	overflow: hidden;
+}
+
+.handle:hover {
+	background-color: #3a400e;
+	transform: scale(1.1);
+}
+
+.handle:hover i {
+	color: white;
+}
+
+.handle {
+	background-color: white;
+	z-index: 999;
+	height: 64px;
+	width: 64px;
+	border-radius: 64px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 150ms ease-in-out;
+	flex-grow: 2;
+}
+
+.handle i {
+	color: var(--primary-color);
+	transition: transform 400ms ease-in-out;
+}
+
+.handle:hover i {
+	/* transform: translate(-50%, 150%); */
+	/* transform: rotate(360deg); */
+}
+.right-handle {
+	margin-right: 40px;
+}
+
+#left {
+	color: black;
+}
+.slider {
+	--items-per-screen: 3;
+	--slider-index: 0;
+	width: 80%;
+	transform: translateX(calc(var(--slider-index) * -50%));
+	transition: transform 500ms ease-in-out;
+}
+
+.slider > a {
+	flex: 0 0 30%;
+	max-width: 25%;
+	flex-grow: 1;
+}
+
+.card {
+	height: 460px;
+	background-color: var(--primary-color);
+	border-radius: 15px;
+	margin: 0.5rem;
+	z-index: 0;
+	font-family: 'Montserrat';
+	align-items: center;
+	justify-content: space-between;
+}
+
+.post-header {
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+.author {
+	font-size: 14px;
+	/* padding: 10px; */
+}
+
+.author-container {
+	align-self: flex-start;
+	align-items: center;
+	padding: 20px;
+}
+
+.author-image {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+}
+
+.author-text-container {
+	padding: 10px;
+}
+
+.author-text-container p {
+	padding: 0;
+	margin: 0;
+}
+
+.time {
+	font-size: 12px;
+	opacity: 0.5;
+}
+
+/* About */
+
+.about {
+	height: 700px;
+	background-image: url(/resources/images/allan-nygren--xvKQuNtOhI-unsplash.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* Contact */
+
+.contact {
+	background: aqua;
+}
+
+/* Smaller screens */
+
+/* @media (max-width: 768px) {
+	.slider {
+		--items-per-screen: 3;
+	}
+} */
