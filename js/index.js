@@ -14,8 +14,8 @@ getPosts();
 
 const createHTML = (posts) => {
 	posts.forEach((post) => {
-		console.log(posts);
-		// const img = post._embedded['wp:featuredmedia']['0'].source_url;
+		// console.log(posts);
+
 		if (post.author === 1) {
 			post.author = 'Admin';
 		}
@@ -31,9 +31,6 @@ const createHTML = (posts) => {
 				</div>
 			</div>
 		</a>
-		
-	
-	
 	`;
 	});
 };

@@ -5,6 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/css/styles.css" />
+		<link
+			rel="icon"
+			href="/resources/images/golf-ball-with-dents.png"
+			type="image/x-icon"
+		/>
 		<script
 			src="https://kit.fontawesome.com/3b57eb3f32.js"
 			crossorigin="anonymous"
@@ -12,15 +17,15 @@
 		<title>Golf blog</title>
 	</head>
 	<body>
+		<div class="cursor"></div>
 		<section class="intro flex_col">
 			<div class="navbar flex">
 				<p class="logo">Logo</p>
-				<!-- <img src="/resources/images/golf-ball-with-dents.png" class="logo" /> -->
 				<ul class="links flex">
-					<li><a>Home</a></li>
-					<li><a>Posts</a></li>
-					<li><a>About</a></li>
-					<li><a>Contact</a></li>
+					<li><a href="/index.html">Home</a></li>
+					<li><a href="/posts.html">Posts</a></li>
+					<li><a href="/about.html">About</a></li>
+					<li><a href="/contact.html">Contact</a></li>
 				</ul>
 			</div>
 			<div class="middle flex">
@@ -28,7 +33,7 @@
 					<div class="current">01</div>
 					<div class="total">04</div>
 				</div>
-				<h1 class="title">
+				<h1 class="title intro-title">
 					The blog you have been <br />
 					looking for, <br />
 					this whole time
@@ -51,13 +56,78 @@
 					<i class="fa fa-thin fa-arrow-left"></i>
 				</div>
 				<div class="slider flex"></div>
-				<div class="handle right-handle flex">
+				<div class="handle right-handle flex" id="right">
 					<i class="fa fa-thin fa-arrow-right"></i>
 				</div>
 			</div>
 		</section>
-		<section class="about"></section>
-		<section class="contact"></section>
+		<section class="about flex">
+			<div class="pagination">
+				<div class="current" id="about">03</div>
+				<div class="total">04</div>
+			</div>
+			<div class="about-container">
+				<div class="image-wrapper">
+					<img
+						src="/resources/images/about.jpg"
+						alt="Image of Dan, Andy and Steve at the golf course"
+					/>
+					<div class="dot andy"></div>
+					<div class="dot dan"></div>
+					<div class="dot steve"></div>
+				</div>
+				<div class="text-wrapper">
+					<p class="history">History</p>
+					<h3>Who are we?</h3>
+					<p class="block">
+						It all started out with a burning interest in golf and friendships
+						that had lasted a long while. Playing was not covering the hunger
+						for golf and 3 buddies decided to get involved in the online world
+						of golf. We want to cover everything and anything, in a matter of
+						not being too formal.
+					</p>
+					<a class="button" href="/about.html">Read more about us</a>
+				</div>
+			</div>
+		</section>
+		<section class="contact flex_col">
+			<img
+				src="/resources/images/golf-ball-with-dents.png"
+				alt="Golf ball logo"
+				class="golf-ball"
+			/>
+			<div class="contact-container flex_col">
+				<div class="contact-title flex_col">
+					<h2 class="contact-us-title">Contact us?</h2>
+					<h2 class="lets-talk">Let's talk</h2>
+				</div>
+
+				<p>
+					Do you share our interest for the game of golf? We are looking to
+					expand and want more peoples opinion. Send us a message and we will
+					contact you back.
+				</p>
+				<a href="/contact.html" class="button">Contact Us</a>
+				<div class="pagination contact-page">
+					<div class="current" id="trending-pagination">04</div>
+					<div class="total">04</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer flex_col">
+			<div class="socials flex">
+				<i class="fa fa-brands fa-facebook"></i>
+				<i class="fa fa-brands fa-instagram"></i>
+				<i class="fa fa-brands fa-twitter"></i>
+				<i class="fa fa-brands fa-dribbble"></i>
+				<i class="fa fa-brands fa-youtube"></i>
+			</div>
+			<div class="copyright flex_col">
+				<p>&copy; 2022 The Golf Blog</p>
+				<p>All rights reserved. Made by <span>BMSF</span></p>
+			</div>
+		</footer>
 		<script src="/js/index.js"></script>
+		<script src="/js/carousel.js"></script>
 	</body>
 </html>
