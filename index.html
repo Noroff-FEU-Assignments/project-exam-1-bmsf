@@ -21,12 +21,27 @@
 		<section class="intro flex_col">
 			<div class="navbar flex">
 				<p class="logo">Logo</p>
-				<ul class="links flex">
+				<div class="menu-box">
+					<img src="/resources/icons/menu (1).png" />
+				</div>
+			</div>
+			<div class="links flex_col">
+				<div class="menu-box" id="open-box">
+					<img src="/resources/icons/close.png" />
+				</div>
+				<ul class="flex_col nav-links">
 					<li><a href="/index.html">Home</a></li>
 					<li><a href="/posts.html">Posts</a></li>
 					<li><a href="/about.html">About</a></li>
 					<li><a href="/contact.html">Contact</a></li>
 				</ul>
+				<div class="socials flex">
+					<i class="fa fa-brands fa-facebook"></i>
+					<i class="fa fa-brands fa-instagram"></i>
+					<i class="fa fa-brands fa-twitter"></i>
+					<i class="fa fa-brands fa-dribbble"></i>
+					<i class="fa fa-brands fa-youtube"></i>
+				</div>
 			</div>
 			<div class="middle flex">
 				<div class="pagination">
@@ -45,7 +60,7 @@
 		</section>
 		<section class="trending flex_col">
 			<h2 class="title trending-title">
-				Trending in the<br /><span>Golfing World</span>
+				Trending in the<br /><span class="golfing-world">Golfing World</span>
 			</h2>
 			<div class="flex carousel-container">
 				<div class="pagination trending-page">
@@ -61,6 +76,7 @@
 				</div>
 			</div>
 		</section>
+		<div class="splitter"></div>
 		<section class="about flex">
 			<div class="pagination">
 				<div class="current" id="about">03</div>
@@ -130,5 +146,6 @@
 		<script src="/js/blog-posts.js"></script>
 		<script src="/js/carousel.js"></script>
 		<script src="/js/details.js"></script>
+		<script src="/js/menu.js"></script>
 	</body>
 </html>

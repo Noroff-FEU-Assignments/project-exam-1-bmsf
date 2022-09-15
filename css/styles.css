@@ -5,7 +5,7 @@
 :root {
 	--primary-color: #0f2615;
 	--secondary-color: #485059;
-	--silver: #ebebeb;
+	--silver: #bf9d7e;
 	--title-font: 'Raleway';
 	--paragraph-font: 'Montserrat';
 	--standard-padding: 20px;
@@ -84,6 +84,10 @@ a {
 	border: 1px solid hidden;
 }
 
+.splitter {
+	border-bottom: 2px solid var(--primary-color);
+}
+
 /* .cursor {
 	width: 3rem;
 	height: 3rem;
@@ -117,11 +121,14 @@ section {
 /* Navbar */
 
 .navbar {
-	width: 100%;
+	padding: var(--standard-padding) 0;
+	margin: 0 50px;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 	color: white;
-	padding-top: var(--standard-padding);
+	position: sticky;
+	top: 0;
+	z-index: 9;
 }
 
 .logo {
@@ -130,14 +137,77 @@ section {
 }
 
 .links {
+	right: 0;
+	z-index: 999;
+	top: -20px;
 	list-style: none;
-	margin: 2rem;
+	position: absolute;
+	background-color: var(--primary-color);
+	height: 800px;
+	width: 400px;
+	align-items: center;
+	padding: 50px;
+	transform: translateX(100%);
+	transition: transform 0.5s ease-in;
 }
 
-.links li {
-	padding: 0 15px;
+.nav-links-active {
+	transform: translateX(0%);
 }
 
+.links ul {
+	list-style: none;
+	margin-bottom: 50px;
+	align-items: center;
+}
+
+.nav-links li {
+	padding: var(--standard-padding) 0;
+	font-size: 32px;
+	position: relative;
+}
+
+.nav-links li::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: white;
+	transform: scaleX(0);
+	transform-origin: middle;
+	transition: transform 250ms ease-in;
+}
+
+.nav-links li:hover::after {
+	transform: scale(1);
+}
+
+#open-box {
+	align-self: flex-end;
+}
+.menu-box {
+	height: 64px;
+	width: 64px;
+	border-radius: 100%;
+	background-color: white;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	cursor: pointer;
+}
+
+.menu-box:hover {
+	background-color: var(--secondary-color);
+	transform: scale(1.1);
+}
+
+.menu-box img {
+	width: 50%;
+}
 /* Middle section of intro */
 
 .middle {
@@ -168,6 +238,10 @@ section {
 	position: relative;
 	color: var(--primary-color);
 	margin-left: calc(18.6% + 26px);
+}
+
+.golfing-world {
+	color: white;
 }
 
 .trending-page {
@@ -244,6 +318,8 @@ section {
 	align-items: center;
 	justify-content: space-between;
 	padding: var(--standard-padding);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+		rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .post-header {
