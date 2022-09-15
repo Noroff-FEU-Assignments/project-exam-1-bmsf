@@ -1,0 +1,36 @@
+body {
+	color: black;
+}
+
+.wrapper {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+
+.wrapper p {
+	width: 50%;
+}
+
+.contact-form {
+	width: 50%;
+	margin: auto;
+}
+
+h2 {
+	color: black;
+}
+
+input,
+label {
+	padding: var(--standard-padding);
+}
+
+input {
+	border: 1px none var(--primary-color);
+	border-radius: 5px;
+	background-color: var(--silver);
+}

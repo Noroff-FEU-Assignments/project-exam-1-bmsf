@@ -1,0 +1,15 @@
+body {
+	color: black;
+}
+
+.article-container {
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	margin: auto;
+	align-items: center;
+}
+
+.featured-image {
+	width: 100%;
+}

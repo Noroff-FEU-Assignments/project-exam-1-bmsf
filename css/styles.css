@@ -437,10 +437,10 @@ section {
 }
 
 .golf-ball {
-	width: 25%;
+	width: 30%;
 	opacity: 0.1;
 	margin: 50px;
-	margin-top: 200px;
+	margin-top: 250px;
 }
 
 .contact-page {
@@ -485,12 +485,22 @@ section {
 /* Footer */
 
 footer {
-	/* height: 180px; */
+	color: white;
 	background-color: #0f2615;
 	padding: 50px;
 	align-items: center;
 	justify-content: center;
+	margin-top: 100px;
+	background-image: url(/resources/images/joe-dudeck-ofFiDK_oW5s-unsplash.jpg);
+	background-size: cover;
+	background-position: center;
 }
+
+/* .socials {
+	background-color: var(--secondary-color);
+	border-radius: 15px;
+	padding: 50px;
+} */
 
 .socials i {
 	font-size: 35px;
@@ -502,8 +512,8 @@ footer {
 	align-items: center;
 }
 
-span {
-	color: var(--secondary-color);
+footer span {
+	color: #e10b52;
 }
 
 /* Smaller screens */
