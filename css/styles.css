@@ -132,7 +132,7 @@ section {
 }
 
 .logo {
-	max-width: 20px;
+	max-width: 100px;
 	margin: 2rem;
 }
 
@@ -143,12 +143,12 @@ section {
 	list-style: none;
 	position: absolute;
 	background-color: var(--primary-color);
-	height: 800px;
+	height: 100vh;
 	width: 400px;
 	align-items: center;
 	padding: 50px;
 	transform: translateX(100%);
-	transition: transform 0.5s ease-in;
+	transition: transform 0.4s ease-in;
 }
 
 .nav-links-active {

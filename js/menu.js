@@ -3,7 +3,7 @@ const openMenu = document.querySelector('.links');
 const closeMenuButton = document.querySelector('#open-box');
 const body = document.querySelector('body');
 
-console.log(menu);
+
 
 const toggleMenu = () => {
 	body.style.overflow = 'hidden';

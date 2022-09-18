@@ -1,17 +1,19 @@
 const url = 'https://www.course-assignment.store/wp-json/wp/v2/posts?_embed';
 const slider = document.querySelector('.slider');
 
+const gridContainer = document.querySelector('.grid-container');
+
 const getPosts = async () => {
 	try {
 		const response = await fetch(url);
 		const results = await response.json();
-		createHTML(results);
+		createSliderHTML(results);
 	} catch (error) {}
 };
 
 getPosts();
 
-const createHTML = (posts) => {
+const createSliderHTML = (posts) => {
 	posts.forEach((post) => {
 		if (post.author === 1) {
 			post.author = 'Admin';
@@ -32,12 +34,12 @@ const createHTML = (posts) => {
 };
 
 // Image scroll
-const parralax = document.querySelector('.intro');
-window.addEventListener('scroll', function () {
-	let offset = window.scrollY;
+// const parralax = document.querySelector('.intro');
+// window.addEventListener('scroll', function () {
+// 	let offset = window.scrollY;
 
-	parralax.style.backgroundPositionY = offset * 1 + 'px';
-});
+// 	parralax.style.backgroundPositionY = offset * 1 + 'px';
+// });
 
 //Trending carousel scroll
 

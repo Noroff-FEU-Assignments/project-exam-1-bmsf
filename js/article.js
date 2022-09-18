@@ -4,12 +4,9 @@ const id = params.get('id');
 
 const articleContainer = document.querySelector('.article-container');
 
-const urlID = `https://www.course-assignment.store/wp-json/wp/v2/posts/${id}?_embed`;
+console.log(articleContainer);
 
-// console.log(queryString);
-// console.log(params);
-// console.log(id);
-// console.log(url);
+const urlID = `https://www.course-assignment.store/wp-json/wp/v2/posts/${id}?_embed`;
 
 const getPostDetails = async () => {
 	try {

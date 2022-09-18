@@ -1,16 +1,14 @@
-let mouseCursor = document.querySelector('.cursor');
+// let mouseCursor = document.querySelector('.cursor');
 // const card = document.querySelector('.card');
 // console.log(card);
 
-console.log(mouseCursor);
+// window.addEventListener('mousemove', cursor);
 
-window.addEventListener('mousemove', cursor);
+// function cursor(e) {
 
-function cursor(e) {
-	
-	mouseCursor.style.top = e.pageY + 'px';
-	mouseCursor.style.left = e.pageX + 'px';
-}
+// 	mouseCursor.style.top = e.pageY + 'px';
+// 	mouseCursor.style.left = e.pageX + 'px';
+// }
 
 // cards.forEach((card) => {
 // 	console.log(card);
