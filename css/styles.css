@@ -123,17 +123,16 @@ section {
 .navbar {
 	padding: var(--standard-padding) 0;
 	margin: 0 50px;
+	/* max-width: 1200px; */
 	align-items: center;
 	justify-content: space-between;
 	color: white;
-	position: sticky;
 	top: 0;
-	z-index: 9;
 }
 
 .logo {
-	max-width: 100px;
-	margin: 2rem;
+	width: 100px;
+	padding: 0;
 }
 
 .links {
@@ -188,8 +187,8 @@ section {
 	align-self: flex-end;
 }
 .menu-box {
-	height: 64px;
-	width: 64px;
+	height: 50px;
+	width: 50px;
 	border-radius: 100%;
 	background-color: white;
 	color: white;

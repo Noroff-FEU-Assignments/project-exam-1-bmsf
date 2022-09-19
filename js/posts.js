@@ -11,9 +11,18 @@ const getAllPosts = async () => {
 
 getAllPosts();
 
-const createAllPostsHTML =  (posts) => {
- console.log(posts);
-	gridContainer.innerHTML = `<h1>Hei</h1>`;
+const createAllPostsHTML = (posts) => {
+	console.log(posts);
+	posts.forEach((post) => {
+		gridContainer.innerHTML += `
+		
+        <a class='card flex_col card-container' href='./article.html?id=${post.id}'>
+			<img class='card-img' src='${post._embedded['wp:featuredmedia']['0'].source_url}'/>
+			<div class='text-container flex_col'>
+				<p class='post-header'>${post.title.rendered}</p>
+			</div>
+			
+        </a>
+        `;
+	});
 };
-
-createAllPostsHTML();

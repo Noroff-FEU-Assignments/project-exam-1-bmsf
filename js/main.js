@@ -1,8 +1,6 @@
 const url = 'https://www.course-assignment.store/wp-json/wp/v2/posts?_embed';
 const slider = document.querySelector('.slider');
 
-const gridContainer = document.querySelector('.grid-container');
-
 const getPosts = async () => {
 	try {
 		const response = await fetch(url);
