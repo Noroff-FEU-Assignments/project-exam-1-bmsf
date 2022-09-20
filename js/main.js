@@ -1,5 +1,4 @@
 const url = 'https://www.course-assignment.store/wp-json/wp/v2/posts?_embed';
-const slider = document.querySelector('.slider');
 
 const getPosts = async () => {
 	try {
@@ -40,6 +39,33 @@ const createSliderHTML = (posts) => {
 // });
 
 //Trending carousel scroll
+
+const slider = document.querySelector('.slider');
+
+setTimeout(() => {
+	const slides = Array.from(document.querySelectorAll('.card'));
+
+	let isDraggin = false,
+		startPos = 0,
+		currentTranslate = 0,
+		prevTranslate = 0,
+		animationId = 0,
+		currentIndex = 0;
+
+	slides.forEach((slide, index) => {
+		slide.addEventListener('touchstart', touchStart(index));
+		slide.addEventListener('touchend', touchEnd);
+		slide.addEventListener('touchmove', touchMove);
+	});
+
+	const touchStart = (index) => {
+		return (event) => {
+			console.log('start');
+		};
+	};
+
+	
+}, 300);
 
 document.addEventListener('click', (e) => {
 	let handle;

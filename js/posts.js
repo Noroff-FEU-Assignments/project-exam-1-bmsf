@@ -17,7 +17,10 @@ const createAllPostsHTML = (posts) => {
 		gridContainer.innerHTML += `
 		
         <a class='card flex_col card-container' href='./article.html?id=${post.id}'>
-			<img class='card-img' src='${post._embedded['wp:featuredmedia']['0'].source_url}'/>
+			<div class='image-container'>
+				<img class='card-img' src='${post._embedded['wp:featuredmedia']['0'].source_url}'/>
+			</div>
+			
 			<div class='text-container flex_col'>
 				<p class='post-header'>${post.title.rendered}</p>
 			</div>

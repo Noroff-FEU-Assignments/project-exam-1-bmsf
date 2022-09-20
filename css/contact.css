@@ -1,5 +1,6 @@
 body {
 	color: black;
+	background-color: var(--silver);
 }
 
 .wrapper {
@@ -25,12 +26,54 @@ h2 {
 }
 
 input,
+textarea {
+	border: 1px none var(--primary-color);
+	border-radius: 5px;
+	min-height: 72px;
+	margin: var(--standard-padding) 0;
+	font-size: 20px;
+	font-family: var(--paragraph-font);
+	padding: 0 var(--standard-padding);
+}
+
 label {
+	/* padding: 0 var(--standard-padding); */
+}
+
+textarea {
+	min-height: 300px;
+	padding: var(--standard-padding);
+	line-height: 2;
+}
+
+textarea::placeholder,
+input::placeholder {
+	color: rgb(206, 204, 204);
+}
+
+#submit {
+	width: 40%;
+	cursor: pointer;
+	background-color: inherit;
+	font-size: 20px;
+}
+
+.error-div {
+	background-color: #e10b52;
+	width: 100%;
+	margin-bottom: 20px;
+	display: none;
+}
+
+.error-div p {
+	color: white;
+	width: 100%;
+	font-size: 20px;
+	margin: 0;
 	padding: var(--standard-padding);
 }
 
-input {
-	border: 1px none var(--primary-color);
-	border-radius: 5px;
-	background-color: var(--silver);
+.error-div i {
+	color: white;
+	font-size: 18px;
 }
