@@ -5,7 +5,14 @@ const getPosts = async () => {
 		const response = await fetch(url);
 		const results = await response.json();
 		createSliderHTML(results);
-	} catch (error) {}
+		// createScrollForMobile();
+	} catch (error) {
+		slider.innerHTML = `
+			<div></div>
+			<h5>We are sorry. There was a problem loading your content. ${error}</h5>
+		`;
+		console.log(error);
+	}
 };
 
 getPosts();
@@ -15,6 +22,7 @@ const createSliderHTML = (posts) => {
 		if (post.author === 1) {
 			post.author = 'Admin';
 		}
+		document.querySelector('.lds-ring').style.display = 'none';
 		slider.innerHTML += `
 		<a class='card flex_col' href='./article.html?id=${post.id}'>
 			<p class='post-header'>${post.title.rendered}</p>
@@ -30,42 +38,78 @@ const createSliderHTML = (posts) => {
 	});
 };
 
-// Image scroll
-// const parralax = document.querySelector('.intro');
-// window.addEventListener('scroll', function () {
-// 	let offset = window.scrollY;
+// Header image scroll effect
 
-// 	parralax.style.backgroundPositionY = offset * 1 + 'px';
-// });
+const parralax = document.querySelector('.intro');
+window.addEventListener('scroll', function () {
+	let offset = window.scrollY;
+
+	parralax.style.backgroundPositionY = offset * 1 + 'px';
+});
 
 //Trending carousel scroll
 
 const slider = document.querySelector('.slider');
 
-setTimeout(() => {
-	const slides = Array.from(document.querySelectorAll('.card'));
+// const createScrollForMobile = () => {
+// 	let slides = Array.from(document.querySelectorAll('.card'));
 
-	let isDraggin = false,
-		startPos = 0,
-		currentTranslate = 0,
-		prevTranslate = 0,
-		animationId = 0,
-		currentIndex = 0;
+// 	const animation = () => {
+// 		if (isDragging) requestAnimationFrame(animation);
+// 		setSliderPosition();
+// 	};
 
-	slides.forEach((slide, index) => {
-		slide.addEventListener('touchstart', touchStart(index));
-		slide.addEventListener('touchend', touchEnd);
-		slide.addEventListener('touchmove', touchMove);
-	});
+// 	let isDragging = false,
+// 		startPos = 0,
+// 		currentTranslate = 0,
+// 		prevTranslate = 0,
+// 		animationID = requestAnimationFrame(animation),
+// 		currentIndex = 0;
 
-	const touchStart = (index) => {
-		return (event) => {
-			console.log('start');
-		};
-	};
+// 	window.oncontextmenu = (event) => {
+// 		event.preventDefault();
+// 		event.stopPropagation();
+// 		return false;
+// 	};
 
-	
-}, 300);
+// 	const getPositionX = (event) => {
+// 		return event.type.includes('mouse')
+// 			? event.pageX
+// 			: event.touches[0].clientX;
+// 	};
+
+// 	const touchStart = (index) => {
+// 		return (event) => {
+// 			currentIndex = index;
+// 			startPos = getPositionX(event);
+// 			isDragging = true;
+
+// 			animationID = requestAnimationFrame(animation);
+// 		};
+// 	};
+
+// 	const touchMove = (event) => {
+// 		if (isDragging) {
+// 			const currentPosition = getPositionX(event);
+// 			currentTranslate = prevTranslate + currentPosition - startPos;
+// 		}
+// 	};
+
+// 	const touchEnd = () => {
+// 		isDragging = false;
+// 		cancelAnimationFrame(animationID);
+// 	};
+
+// 	const setSliderPosition = () => {
+// 		slider.style.transform = `translateX(${currentTranslate}px)`;
+// 	};
+
+// 	slides.forEach((slide, index) => {
+// 		slide.addEventListener('touchstart', touchStart(index));
+// 		slide.addEventListener('touchend', touchEnd);
+// 		slide.addEventListener('touchmove', touchMove);
+// 	});
+// };
 
 document.addEventListener('click', (e) => {
 	let handle;

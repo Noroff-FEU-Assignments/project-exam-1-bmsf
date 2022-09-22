@@ -2,12 +2,15 @@ body {
 	background-color: var(--silver);
 }
 
+.container {
+	margin: 0 10%;
+}
+
 .grid-container {
-	width: 80%;
-	margin: 100px auto;
+	width: 70%;
+	margin: var(--standard-padding) auto;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
 	gap: 40px;
 }
 

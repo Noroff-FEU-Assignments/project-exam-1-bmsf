@@ -11,16 +11,27 @@ const subjectError = document.querySelector('.subject-error');
 const message = document.querySelector('#message');
 const messageError = document.querySelector('.message-error');
 
+const success = document.querySelector('.success');
+const closeSuccess = document.querySelector('.success-btn');
+
 const validate = (event) => {
 	event.preventDefault();
 
-	console.log(userName.value);
-
 	const validateName = validateLength(userName.value, 5, nameError);
+	const validateSubject = validateLength(subject.value, 15, subjectError);
+	const validateMessage = validateLength(message.value, 25, messageError);
+	const validateEmail = emailValidationFunction(email.value);
 
-	console.log(validateName);
+	if (!validateEmail) {
+		emailError.style.display = 'block';
+	}
 
-	nameError.style.display = 'block';
+	if (validateName && validateEmail && validateSubject && validateMessage) {
+		success.style.display = 'block';
+		setTimeout(() => {
+			success.style.display = 'none';
+		}, 5000);
+	}
 };
 
 form.addEventListener('submit', validate);
@@ -31,6 +42,22 @@ const validateLength = (value, len, errorType) => {
 		return true;
 	} else {
 		errorType.style.display = 'block';
-		errorList.style.display = 'block';
 	}
 };
+
+const emailValidationFunction = (email) => {
+	const regEx = /\S+@\S+\.\S/;
+	const patternMatches = regEx.test(email);
+	return patternMatches;
+};
+
+// closeSuccess.addEventListener('click', () => {
+// 	success.style.display = 'none';
+// 	console.log('hei');
+// });
+
+// window.onclick = function (event) {
+// 	if (event.target == modal) {
+// 		modal.style.display = 'none';
+// 	}
+// };

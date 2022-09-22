@@ -1,5 +1,6 @@
 body {
-	color: black;
+	/* color: var(--primary-color); */
+	background-color: var(--silver);
 }
 
 .article-container {
@@ -8,6 +9,8 @@ body {
 	width: 70%;
 	margin: auto;
 	align-items: center;
+	/* background-color: #ebebeb;
+	padding: 50px; */
 }
 
 .featured-image {

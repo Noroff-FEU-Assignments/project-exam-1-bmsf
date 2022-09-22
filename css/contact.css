@@ -1,6 +1,14 @@
 body {
-	color: black;
+	color: var(--primary-color);
 	background-color: var(--silver);
+}
+
+h2 {
+	font-size: 64px;
+}
+
+main {
+	margin-bottom: 200px;
 }
 
 .wrapper {
@@ -14,6 +22,9 @@ body {
 
 .wrapper p {
 	width: 50%;
+	font-size: 20px;
+	line-height: 2;
+	padding-bottom: 30px;
 }
 
 .contact-form {
@@ -63,6 +74,7 @@ input::placeholder {
 	width: 100%;
 	margin-bottom: 20px;
 	display: none;
+	border-radius: 5px;
 }
 
 .error-div p {
@@ -76,4 +88,55 @@ input::placeholder {
 .error-div i {
 	color: white;
 	font-size: 18px;
+}
+
+.modal {
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	overflow: auto;
+}
+
+.modal-content {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fefefe;
+	border-radius: 5px;
+	margin: 10% auto;
+	padding: var(--standard-padding);
+	width: 40%;
+	min-height: 300px;
+}
+
+.modal-content > p,
+button {
+	margin: 10px;
+}
+
+.success-btn {
+	width: 40%;
+	background-color: #91bf95;
+	cursor: pointer;
+}
+
+.modal-title {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+@media (max-width: 960px) {
+	.contact-form {
+		width: 100%;
+	}
+
+	.wrapper p {
+		width: 100%;
+	}
 }
