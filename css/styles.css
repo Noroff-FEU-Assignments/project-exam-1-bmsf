@@ -3,9 +3,10 @@
 /* Colors */
 
 :root {
-	--primary-color: #0f2615;
-	--secondary-color: #485059;
-	--silver: #bf9d7e;
+	--primary-color: #404040;
+	--secondary-color: #798c7a;
+	--third-color: #a8bfaa;
+	--light-gray: #f2f2f2;
 	--title-font: 'Raleway';
 	--paragraph-font: 'Montserrat';
 	--standard-padding: 20px;
@@ -22,7 +23,7 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: var(--title-font);
-	color: white;
+	color: var(--light-gray);
 	overflow-x: hidden;
 }
 
@@ -69,7 +70,7 @@ a {
 }
 
 .current {
-	border-bottom: solid 1px white;
+	border-bottom: solid 1px var(--light-gray);
 }
 
 .total {
@@ -89,7 +90,7 @@ a {
 
 .button:hover {
 	background-color: var(--secondary-color);
-	color: white;
+	color: var(--light-gray);
 	border: 1px solid hidden;
 }
 
@@ -170,7 +171,7 @@ section {
 	margin: 0 10%;
 	align-items: center;
 	justify-content: space-between;
-	color: white;
+	color: var(--light-gray);
 	top: 0;
 }
 
@@ -180,7 +181,7 @@ section {
 }
 
 .links {
-	color: white;
+	color: var(--light-gray);
 	right: 0;
 	z-index: 999;
 	top: -20px;
@@ -233,7 +234,7 @@ section {
 	bottom: 0;
 	width: 100%;
 	height: 2px;
-	background-color: white;
+	background-color: var(--light-gray);
 	transform: scaleX(0);
 	transform-origin: middle;
 	transition: transform 250ms ease-in;
@@ -250,8 +251,8 @@ section {
 	height: 50px;
 	width: 50px;
 	border-radius: 100%;
-	background-color: white;
-	color: white;
+	background-color: var(--light-gray);
+	color: var(--light-gray);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -273,13 +274,13 @@ section {
 	width: 50%;
 	position: absolute;
 	top: 40%;
-	right: 25%;
+	margin-left: calc(18.6% + 26px);
 }
 
 /* Ending section of intro */
 
 .stream {
-	background-color: white;
+	background-color: var(--light-gray);
 	width: 2px;
 	margin-right: 50px;
 	height: 100px;
@@ -288,21 +289,12 @@ section {
 	right: 10%;
 }
 
-.stream::before {
-	content: '';
-	/* width: 100%;
-	height: 50%;
-	position: absolute;
-	top: 0; */
-	/* border-left: 2px solid white; */
-}
-
 .stream::after {
 	content: '';
 	width: 100%;
 	height: 50%;
 	position: absolute;
-	border-left: 2px solid var(--silver);
+	border-left: 2px solid var(--third-color);
 	animation: stream 1.75s ease-out infinite;
 }
 
@@ -318,7 +310,7 @@ section {
 /* Trending section */
 
 .trending {
-	background: var(--silver);
+	background: var(--third-color);
 	height: 1000px;
 	justify-content: center;
 	gap: 50px 0px;
@@ -331,7 +323,7 @@ section {
 }
 
 .golfing-world {
-	color: white;
+	color: var(--light-gray);
 }
 
 .trending-page {
@@ -349,8 +341,7 @@ section {
 }
 
 .handle {
-	background-color: white;
-
+	background-color: var(--light-gray);
 	height: 64px;
 	width: 64px;
 	border-radius: 64px;
@@ -367,7 +358,7 @@ section {
 }
 
 .handle:hover i {
-	color: white;
+	color: var(--light-gray);
 }
 
 .handle i {
@@ -377,6 +368,7 @@ section {
 
 .left-handle {
 	left: 120px;
+	z-index: 2;
 }
 .right-handle {
 	margin-right: 40px;
@@ -386,7 +378,7 @@ section {
 .slider {
 	width: 80%;
 	display: grid;
-	grid-template-columns: repeat(8, 320px);
+	grid-template-columns: repeat(10, 320px);
 	--items-per-screen: 3;
 	--slider-index: 0;
 	transform: translateX(calc(var(--slider-index) * -70%));
@@ -447,10 +439,14 @@ section {
 /* About */
 
 .about {
-	background-color: #bf9d7e;
+	background-color: var(--light-gray);
 	align-items: center;
 	color: var(--primary-color);
 	height: 1000px;
+}
+
+.about-image {
+	border-radius: 10px;
 }
 
 #about {
@@ -476,7 +472,7 @@ section {
 .dot {
 	height: var(--standard-padding);
 	width: var(--standard-padding);
-	background-color: white;
+	background-color: var(--light-gray);
 	border-radius: var(--standard-padding);
 	position: absolute;
 }
@@ -484,7 +480,7 @@ section {
 .andy::after {
 	content: 'Andy';
 	position: absolute;
-	background: white;
+	background: var(--light-gray);
 	color: var(--primary-color);
 	display: flex;
 	justify-content: center;
@@ -518,7 +514,7 @@ section {
 .dan::after {
 	content: 'Dan';
 	position: absolute;
-	background: white;
+	background: var(--light-gray);
 	color: var(--primary-color);
 	display: flex;
 	justify-content: center;
@@ -546,7 +542,7 @@ section {
 .steve::after {
 	content: 'Steve';
 	position: absolute;
-	background: white;
+	background: var(--light-gray);
 	color: var(--primary-color);
 	display: flex;
 	justify-content: center;
@@ -590,15 +586,9 @@ section {
 
 .contact {
 	color: var(--primary-color);
+	background-color: var(--light-grey);
 	align-items: center;
 	height: 1000px;
-}
-
-.golf-ball {
-	width: 30%;
-	opacity: 0.1;
-	margin: 50px;
-	margin-top: 250px;
 }
 
 .contact-page {
@@ -626,7 +616,7 @@ section {
 }
 
 .lets-talk {
-	color: #565902;
+	color: var(--primary-color);
 	font-size: 68px;
 	line-height: 78px;
 	font-weight: 700;
@@ -643,13 +633,11 @@ section {
 /* Footer */
 
 footer {
-	color: white;
-	background-color: #0f2615;
+	color: var(--light-gray);
+	background-color: #798c7a;
 	padding: 50px;
 	align-items: center;
 	justify-content: center;
-	margin-top: 100px;
-	background-image: url(/resources/images/joe-dudeck-ofFiDK_oW5s-unsplash.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -671,7 +659,7 @@ footer {
 }
 
 footer span {
-	color: #e10b52;
+	color: #0d0d0d;
 }
 
 /* Smaller screens */

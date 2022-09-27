@@ -1,5 +1,5 @@
 body {
-	background-color: #f4f1eb;
+	background-color: var(--light-gray);
 }
 
 main {
@@ -9,7 +9,7 @@ main {
 
 main p {
 	width: 80%;
-	color: #1f1f1f;
+	color: var(--primary-color);
 }
 
 span {

@@ -7,26 +7,21 @@ const title = document.querySelector('.title');
 
 const urlID = `https://www.course-assignment.store/wp-json/wp/v2/posts/${id}?_embed`;
 
-console.log(title);
-
 const getPostDetails = async () => {
 	try {
 		const response = await fetch(urlID);
 		const post = await response.json();
 		createPost(post);
-		createTitle;
 	} catch (error) {
 		`
 			<div></div>
 			<h5>We are sorry. There was a problem loading your content. ${error}</h5>
 
-		`
+		`;
 	}
 };
 
 getPostDetails();
-
-const createTitle = (post) => {};
 
 const createPost = (post) => {
 	console.log(post);
@@ -44,7 +39,10 @@ const createPost = (post) => {
                 <p>${post.date}</p>
             </div>
             <img src='${post._embedded['wp:featuredmedia']['0'].source_url}' class='featured-image'/>
-            <p>${post.content.rendered}</p>
+			<div class='content'>
+				<p>${post.content.rendered}</p>
+			</div>
+            
         
     `;
 };

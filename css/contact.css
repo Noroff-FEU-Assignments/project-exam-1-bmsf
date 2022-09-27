@@ -1,6 +1,6 @@
 body {
 	color: var(--primary-color);
-	background-color: var(--silver);
+	background-color: var(--third-color);
 }
 
 h2 {
@@ -78,7 +78,7 @@ input::placeholder {
 }
 
 .error-div p {
-	color: white;
+	color: var(--light-gray);
 	width: 100%;
 	font-size: 20px;
 	margin: 0;
@@ -86,7 +86,7 @@ input::placeholder {
 }
 
 .error-div i {
-	color: white;
+	color: var(--light-gray);
 	font-size: 18px;
 }
 
