@@ -60,7 +60,7 @@ const createAllPostsHTML = (posts) => {
 				<img src='${post._embedded['wp:featuredmedia']['0'].source_url}' alt='${post.title.rendered}' class='featured-image'/>
 				<div class='text-container flex_col'>
 				<p class='post-title'>${post.title.rendered}</p>
-				${post.excerpt.rendered}
+				
 				<div class='author-text-container flex'>
 				</div>
 				</div>
@@ -69,7 +69,7 @@ const createAllPostsHTML = (posts) => {
 		})
 		.join('');
 
-		// 
+		// ${post.excerpt.rendered}
 		// <img src='${post._embedded['author']['0'].avatar_urls['24']}' class='author-image'/>
 		// 			<div class='flex_col'>
 		// 				<p class='author'>${post._embedded['author']['0'].name}</p>
