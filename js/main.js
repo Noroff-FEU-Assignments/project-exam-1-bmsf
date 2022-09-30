@@ -24,7 +24,7 @@ const createSliderHTML = (posts) => {
 		<a class='card flex_col' href='./article.html?id=${post.id}'>
 			<p class='post-header'>${post.title.rendered}</p>
 			<div class='author-container flex'>
-				<img src='${post._embedded['author']['0'].avatar_urls['24']}' class='author-image'/>
+				<img src='${post._embedded['author']['0'].avatar_urls['24']}' alt='${post.title.rendered}' class='author-image'/>
 				<div class='author-text-container'>
 					<p class='author'>${post._embedded['author']['0'].name}</p>
 					<p class='time'>${post.date}</p>
