@@ -279,13 +279,19 @@
 				</svg>
 			</a>
 			<div class="menu-box">
-				<img src="/resources/icons/menu (1).png" />
+				<img
+					src="/resources/icons/menu.png"
+					alt="Icon of button to open menu"
+				/>
 			</div>
 		</nav>
 		<div class="navbar-container">
 			<div class="links flex_col">
 				<div class="menu-box" id="open-box">
-					<img src="/resources/icons/close.png" />
+					<img
+						src="/resources/icons/close.png"
+						alt="Icona of button to close menu"
+					/>
 				</div>
 				<ul class="flex_col nav-links">
 					<li><a href="/index.html">Home</a></li>
@@ -317,7 +323,6 @@
 						<label for="name">Name</label>
 						<input type="text" name="name" id="name" placeholder="Andy" />
 						<div class="error-div name-error">
-							<!-- <i class="fas fa-solid fa-circle-exclamation"></i> -->
 							<p>Name needs to contain more than 5 characters</p>
 						</div>
 
@@ -329,7 +334,6 @@
 							placeholder="andy@golfbuddies.com"
 						/>
 						<div class="error-div email-error">
-							<!-- <i class="fas fa-solid fa-circle-exclamation"></i> -->
 							<p>Email must be a valid email address</p>
 						</div>
 						<label for="">Subject</label>
@@ -340,7 +344,6 @@
 							placeholder="Applying for job"
 						/>
 						<div class="error-div subject-error">
-							<!-- <i class="fas fa-solid fa-circle-exclamation"></i> -->
 							<p>Subject needs to be more than 15 characters long</p>
 						</div>
 						<label for="">Message</label>
@@ -350,15 +353,14 @@
 							placeholder="I am a young promising golfing nerd that want to talk golf all day and all night"
 						></textarea>
 						<div class="error-div message-error">
-							<!-- <i class="fas fa-solid fa-circle-exclamation"></i> -->
 							<p>Message needs to be more than 25 characters long</p>
 						</div>
 						<input
 							type="submit"
 							name=""
-							id="submit"
+							id="a-tag-btn"
 							value="Send"
-							class="button"
+							class="button submit-btn"
 						/>
 						<div class="modal success">
 							<div class="modal-content flex_col">
@@ -366,7 +368,6 @@
 									Thank you so much for sending us a message!
 								</p>
 								<p>We will try to get in touch as soon as possible</p>
-								<!-- <button class="button success-btn">Go back</button> -->
 							</div>
 						</div>
 					</form>

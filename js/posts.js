@@ -1,11 +1,16 @@
-let numberOfPosts = 10;
+let offset = 0;
+let perPage = 10;
+let url = `https://www.course-assignment.store/wp-json/wp/v2/posts?_embed&?per_page=10&offset=0`;
 
-let url = `https://www.course-assignment.store/wp-json/wp/v2/posts?_embed&per_page=${numberOfPosts}`;
+console.log(url);
+
 const gridContainer = document.querySelector('.grid-container');
 const searchBar = document.getElementById('search');
 const showMore = document.querySelector('.show-more');
 const cardCount = document.querySelector('.card-count');
 const cardTotal = document.querySelector('.card-total');
+
+//Search bar
 
 searchBar.addEventListener('keyup', (e) => {
 	const searchTarget = e.target.value.toLowerCase();
@@ -26,6 +31,8 @@ const getAllPosts = async () => {
 		posts = await response.json();
 
 		createAllPostsHTML(posts);
+
+		console.log(url);
 	} catch (error) {
 		`
 			<div></div>
@@ -34,12 +41,10 @@ const getAllPosts = async () => {
 	}
 };
 
-const cards = document.querySelectorAll('.grid-container > a');
-
-console.log(cards);
-
 const loadMore = () => {
-	numberOfPosts += 10;
+	perPage += 10;
+	// offset += 10;
+	url = `https://www.course-assignment.store/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=${offset}`;
 	getAllPosts();
 };
 
@@ -57,17 +62,19 @@ const createAllPostsHTML = (posts) => {
 				<p class='post-title'>${post.title.rendered}</p>
 				${post.excerpt.rendered}
 				<div class='author-text-container flex'>
-					<img src='${post._embedded['author']['0'].avatar_urls['24']}' class='author-image'/>
-					<div class='flex_col'>
-						<p class='author'>${post._embedded['author']['0'].name}</p>
-						<p class='time'>${post.date}</p>
-					</div>
 				</div>
 				</div>
 			</a>	
 			`;
 		})
 		.join('');
+
+		// 
+		// <img src='${post._embedded['author']['0'].avatar_urls['24']}' class='author-image'/>
+		// 			<div class='flex_col'>
+		// 				<p class='author'>${post._embedded['author']['0'].name}</p>
+		// 				<p class='time'>${post.date}</p>
+		// 			</div>
 
 	// <p class='category'>${post._embedded['wp:term']['0']['0'].name}</p>
 

@@ -10,6 +10,7 @@
 		/>
 		<link rel="stylesheet" href="/css/styles.css" />
 		<link rel="stylesheet" href="/css/article.css" />
+		<link rel="stylesheet" href="/css/posts.css" />
 		<link
 			rel="icon"
 			href="/resources/images/logo-color.png"
@@ -38,7 +39,7 @@
 			})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 		</script>
 	</head>
-	<body>
+	<body class="flex_col">
 		<nav class="navbar flex">
 			<a href="/index.html">
 				<svg
@@ -275,25 +276,33 @@
 				</svg>
 			</a>
 			<div class="menu-box">
-				<img src="/resources/icons/menu (1).png" />
+				<img
+					src="/resources/icons/menu.png"
+					alt="Icon of button to open menu"
+				/>
 			</div>
 		</nav>
-		<div class="links flex_col">
-			<div class="menu-box" id="open-box">
-				<img src="/resources/icons/close.png" />
-			</div>
-			<ul class="flex_col nav-links">
-				<li><a href="/index.html">Home</a></li>
-				<li><a href="/posts.html">Posts</a></li>
-				<li><a href="/about.html">About</a></li>
-				<li><a href="/contact.html">Contact</a></li>
-			</ul>
-			<div class="socials flex">
-				<i class="fa fa-brands fa-facebook"></i>
-				<i class="fa fa-brands fa-instagram"></i>
-				<i class="fa fa-brands fa-twitter"></i>
-				<i class="fa fa-brands fa-dribbble"></i>
-				<i class="fa fa-brands fa-youtube"></i>
+		<div class="navbar-container">
+			<div class="links flex_col">
+				<div class="menu-box" id="open-box">
+					<img
+						src="/resources/icons/close.png"
+						alt="Icon of button to close menu"
+					/>
+				</div>
+				<ul class="flex_col nav-links">
+					<li><a href="/index.html">Home</a></li>
+					<li><a href="/posts.html">Posts</a></li>
+					<li><a href="/about.html">About</a></li>
+					<li><a href="/contact.html">Contact</a></li>
+				</ul>
+				<div class="socials flex">
+					<i class="fa fa-brands fa-facebook"></i>
+					<i class="fa fa-brands fa-instagram"></i>
+					<i class="fa fa-brands fa-twitter"></i>
+					<i class="fa fa-brands fa-dribbble"></i>
+					<i class="fa fa-brands fa-youtube"></i>
+				</div>
 			</div>
 		</div>
 		<div class="article-container flex_col">
@@ -304,6 +313,42 @@
 				<div></div>
 			</div>
 		</div>
+		<!-- <div class="newsletter flex_col">
+			<div class="newsletter-header flex">
+				<p class="title">Stay up to date</p>
+				<p>We send out weekly newsletter with the latest news and reviews</p>
+			</div>
+			<form action="" class="flex newsletter-form">
+				<div class="flex_col">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" placeholder="Andy" />
+					<div class="error-div name-error">
+						<p>Name needs to contain more than 5 characters</p>
+					</div>
+				</div>
+				<div class="flex_col">
+					<label for="">Email</label>
+					<input
+						type="text"
+						name="email"
+						id="email"
+						placeholder="andy@golfbuddies.com"
+					/>
+					<div class="error-div email-error">
+						<p>Email must be a valid email address</p>
+					</div>
+				</div>
+				<input type="submit" name="" id="submit" value="Send" class="button" />
+				<div class="modal success">
+					<div class="modal-content flex_col">
+						<p class="modal-title">
+							Thank you so much for sending us a message!
+						</p>
+						<p>We will try to get in touch as soon as possible</p>
+					</div>
+				</div>
+			</form>
+		</div> -->
 		<footer class="footer flex_col">
 			<div class="socials flex">
 				<i class="fa fa-brands fa-facebook"></i>

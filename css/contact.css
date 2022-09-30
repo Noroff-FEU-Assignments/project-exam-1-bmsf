@@ -32,10 +32,6 @@ main {
 	margin: auto;
 }
 
-h2 {
-	color: black;
-}
-
 input,
 textarea {
 	border: 1px none var(--primary-color);
@@ -45,10 +41,6 @@ textarea {
 	font-size: 20px;
 	font-family: var(--paragraph-font);
 	padding: 0 var(--standard-padding);
-}
-
-label {
-	/* padding: 0 var(--standard-padding); */
 }
 
 textarea {
@@ -62,15 +54,8 @@ input::placeholder {
 	color: rgb(206, 204, 204);
 }
 
-#submit {
-	width: 40%;
-	cursor: pointer;
-	background-color: inherit;
-	font-size: 20px;
-}
-
 .error-div {
-	background-color: #e10b52;
+	background-color: #734e5b;
 	width: 100%;
 	margin-bottom: 20px;
 	display: none;
