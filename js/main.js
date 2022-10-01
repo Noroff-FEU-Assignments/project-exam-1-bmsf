@@ -4,8 +4,8 @@ const getPosts = async () => {
 	try {
 		const response = await fetch(url);
 		const results = await response.json();
+
 		createSliderHTML(results);
-		// createScrollForMobile();
 	} catch (error) {
 		slider.innerHTML = `
 			<div></div>
@@ -132,3 +132,5 @@ function onHandleClick(handle) {
 		slider.style.setProperty('--slider-index', sliderIndex + 1);
 	}
 }
+
+
