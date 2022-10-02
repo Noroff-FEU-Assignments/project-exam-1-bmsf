@@ -98,6 +98,11 @@ body {
 	margin-right: auto;
 }
 
+.comment-section {
+	width: 50%;
+	margin: auto;
+}
+
 @media (max-width: 960px) {
 	.header-text-container {
 		min-height: 50vh;

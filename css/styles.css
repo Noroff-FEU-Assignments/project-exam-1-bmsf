@@ -4,8 +4,8 @@
 
 :root {
 	--primary-color: #404040;
-	--secondary-color: #798c7a;
-	--third-color: #a8bfaa;
+	--secondary-color: #a8bfaa;
+	--third-color: #798c7a;
 	--light-gray: #f2f2f2;
 	--cta-fill: #735050;
 	--title-font: 'Raleway';
@@ -658,8 +658,8 @@ section {
 /* Footer */
 
 footer {
-	color: var(--primary-color);
-	background-color: var(--secondary-color);
+	color: var(--light-gray);
+	background-color: var(--primary-color);
 	padding: 50px;
 	align-items: center;
 	justify-content: center;
@@ -677,17 +677,9 @@ footer {
 	align-items: center;
 }
 
-footer span {
-	color: #0d0d0d;
-}
-
 /* Smaller screens */
 
 @media (max-width: 960px) {
-	.handle {
-		display: none;
-	}
-
 	.intro-title {
 		font-size: 2rem;
 	}

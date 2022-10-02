@@ -24,7 +24,7 @@ const getPostDetails = async () => {
 getPostDetails();
 
 const createPost = (post) => {
-	console.log(post);
+	
 	title.innerHTML = `Golf buddies | ${post.title.rendered}`;
 
 	document.querySelector('.lds-ring').style.display = 'none';
@@ -45,7 +45,7 @@ const createPost = (post) => {
 		</div>
 		<div class='content'>
 		<div class='author-container flex'>
-		<img src='${post._embedded['author']['0'].avatar_urls['24']}' class='author-image'/>
+		<img src='${post._embedded['author']['0'].avatar_urls['24']}' class='author-image' alt='Image of the follwing author: ${post._embedded['author']['0'].name}'/>
 		<p class='name'>${post._embedded['author']['0'].name}</p>
 		<p>5 min read</p>
 		</div>

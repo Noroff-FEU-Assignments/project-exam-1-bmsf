@@ -1,8 +1,5 @@
-let offset = 0;
 let perPage = 10;
 let url = `https://www.course-assignment.store/wp-json/wp/v2/posts?_embed&?per_page=10&offset=0`;
-
-console.log(url);
 
 const gridContainer = document.querySelector('.grid-container');
 const searchBar = document.getElementById('search');
@@ -14,7 +11,6 @@ const cardTotal = document.querySelector('.card-total');
 
 searchBar.addEventListener('keyup', (e) => {
 	const searchTarget = e.target.value.toLowerCase();
-
 	const filteredPost = posts.filter((post) => {
 		const name = post.title.rendered;
 		return name.toLowerCase().includes(searchTarget);
@@ -29,10 +25,7 @@ const getAllPosts = async () => {
 	try {
 		const response = await fetch(url);
 		posts = await response.json();
-
 		createAllPostsHTML(posts);
-
-		console.log(url);
 	} catch (error) {
 		`
 			<div></div>
@@ -41,9 +34,10 @@ const getAllPosts = async () => {
 	}
 };
 
+//Show more button
+
 const loadMore = () => {
 	perPage += 10;
-	// offset += 10;
 	url = `https://www.course-assignment.store/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=${offset}`;
 	getAllPosts();
 };
@@ -68,18 +62,7 @@ const createAllPostsHTML = (posts) => {
 		})
 		.join('');
 
-		// ${post.excerpt.rendered}
-		// <img src='${post._embedded['author']['0'].avatar_urls['24']}' alt='${post.title.rendered}' class='author-image'/>
-		// 			<div class='flex_col'>
-		// 				<p class='author'>${post._embedded['author']['0'].name}</p>
-		// 				<p class='time'>${post.date}</p>
-		// 			</div>
-
-	// <p class='category'>${post._embedded['wp:term']['0']['0'].name}</p>
-
 	gridContainer.innerHTML = htmlString;
 };
-
-//Show more button
 
 getAllPosts();

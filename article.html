@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="/css/styles.css" />
 		<link rel="stylesheet" href="/css/article.css" />
 		<link rel="stylesheet" href="/css/posts.css" />
+		<link rel="stylesheet" href="/css/contact.css" />
 		<link
 			rel="icon"
 			href="/resources/images/logo-color.png"
@@ -41,7 +42,10 @@
 	</head>
 	<body class="flex_col">
 		<nav class="navbar flex">
-			<a href="/index.html">
+			<a
+				href="/index.html"
+				aria-label="Golf buddies logo. Click to go back to home"
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					version="1.1"
@@ -313,32 +317,50 @@
 				<div></div>
 			</div>
 		</div>
-		<!-- <div class="newsletter flex_col">
-			<div class="newsletter-header flex">
-				<p class="title">Stay up to date</p>
-				<p>We send out weekly newsletter with the latest news and reviews</p>
-			</div>
-			<form action="" class="flex newsletter-form">
-				<div class="flex_col">
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name" placeholder="Andy" />
-					<div class="error-div name-error">
-						<p>Name needs to contain more than 5 characters</p>
-					</div>
+		<div class="comment-section flex_col">
+			<form action="" class="comment-form flex_col">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="Andy" />
+				<div class="error-div name-error">
+					<p>Name needs to contain more than 5 characters</p>
 				</div>
-				<div class="flex_col">
-					<label for="">Email</label>
-					<input
-						type="text"
-						name="email"
-						id="email"
-						placeholder="andy@golfbuddies.com"
-					/>
-					<div class="error-div email-error">
-						<p>Email must be a valid email address</p>
-					</div>
+
+				<label for="">Email</label>
+				<input
+					type="text"
+					name="email"
+					id="email"
+					placeholder="andy@golfbuddies.com"
+				/>
+				<div class="error-div email-error">
+					<p>Email must be a valid email address</p>
 				</div>
-				<input type="submit" name="" id="submit" value="Send" class="button" />
+				<label for="">Subject</label>
+				<input
+					type="text"
+					name="subject"
+					id="subject"
+					placeholder="Applying for job"
+				/>
+				<div class="error-div subject-error">
+					<p>Subject needs to be more than 15 characters long</p>
+				</div>
+				<label for="">Message</label>
+				<textarea
+					name="message"
+					id="message"
+					placeholder="I am a young promising golfing nerd that want to talk golf all day and all night"
+				></textarea>
+				<div class="error-div message-error">
+					<p>Message needs to be more than 25 characters long</p>
+				</div>
+				<input
+					type="submit"
+					name=""
+					id=""
+					value="Send"
+					class="button submit-btn a-tag-btn"
+				/>
 				<div class="modal success">
 					<div class="modal-content flex_col">
 						<p class="modal-title">
@@ -348,7 +370,7 @@
 					</div>
 				</div>
 			</form>
-		</div> -->
+		</div>
 		<footer class="footer flex_col">
 			<div class="socials flex">
 				<i class="fa fa-brands fa-facebook"></i>
