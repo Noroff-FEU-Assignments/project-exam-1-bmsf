@@ -612,8 +612,8 @@ section {
 .contact {
 	color: var(--primary-color);
 	background-color: var(--light-gray);
-	align-items: center;
-	height: 1000px;
+	align-items: space-between;
+	height: 160vh;
 }
 
 .contact-page {
@@ -704,5 +704,11 @@ footer {
 	}
 	.dot {
 		display: none;
+	}
+	.contact-title {
+		margin-top: 100px;
+	}
+	.image-wrapper {
+		margin: 0;
 	}
 }

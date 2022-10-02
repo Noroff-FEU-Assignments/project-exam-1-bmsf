@@ -32,6 +32,8 @@ const validate = (event) => {
 			success.style.display = 'none';
 		}, 5000);
 	}
+
+	
 };
 
 form.addEventListener('submit', validate);
@@ -51,13 +53,4 @@ const emailValidationFunction = (email) => {
 	return patternMatches;
 };
 
-// closeSuccess.addEventListener('click', () => {
-// 	success.style.display = 'none';
-// 	console.log('hei');
-// });
 
-// window.onclick = function (event) {
-// 	if (event.target == modal) {
-// 		modal.style.display = 'none';
-// 	}
-// };

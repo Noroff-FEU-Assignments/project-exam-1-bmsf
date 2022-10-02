@@ -38,7 +38,7 @@ const getAllPosts = async () => {
 
 const loadMore = () => {
 	perPage += 10;
-	url = `https://www.course-assignment.store/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=${offset}`;
+	url = `https://www.course-assignment.store/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=0`;
 	getAllPosts();
 };
 
