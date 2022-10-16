@@ -1,6 +1,6 @@
 # Project Exam 1 - Golf buddies
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://gyazo.com/ddd782fff18916ee934a2b8b6ead3f48)
 
 A golfing blog
 
