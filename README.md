@@ -1,7 +1,5 @@
 # Project Exam 1 - Golf buddies
 
-![image](https://gyazo.com/ddd782fff18916ee934a2b8b6ead3f48)
-
 A golfing blog
 
 ## Description
